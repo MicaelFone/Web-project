@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - SeuPet</title>
+
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <script src="./cadastro.js"></script>
+</head>
+
+<body>
+  <main class="telaLogin">
+    <div class="loginPrincipal">
+      <div class="paiLogin">
+        <div class="boxLogin">
+          <h1><img src="imagens/logo.png" alt=""></h1>
+          <fieldset>
+            <input type="text" id="cadastroNome" required placeholder="Nome" class="input-padrao">
+            <input type="text" id="cadastroCPF" required placeholder="CPF: 000.000.000-00" class="input-padrao">
+            <input type="email" id="cadastroEmail" required placeholder="E-mail: user@user.com" class="input-padrao">
+            <input type="password" id="cadastroSenha" required placeholder="Senha" class="input-padrao">
+            <input type="password" id="cadastroConfirmarSenha" required placeholder="Confirmar Senha" class="input-padrao">
+          </fieldset>
+          <div class="entrarSeupet">
+            <!-- <a href="register.html"><input type="submit" value="Criar Conta" class="enviar" onclick="confirmRegister()"></a> -->
+            <input type="submit" value="Criar Conta" class="enviar" onclick="confirmRegister()">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

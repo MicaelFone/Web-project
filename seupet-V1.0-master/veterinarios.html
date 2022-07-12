@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Veterinários - SeuPet</title>
+        
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+        
+    </head>
+
+    <body>
+        <header class="cabecalho">
+            <div class="cabecalhoSecundario">
+                    <nav class="cabecalhoLogin">
+                        <p id="usuarioLogado"></p>
+                    </nav>
+                    <a class="cabecalhoLogout" href="login.html">Sair</a>
+            </div>
+            <div class="cabecalhoPrincipal">
+                <div class="CabecalhoLogo-Nav">
+                    <h1 class="cabecalho-logo">
+                        <a href="index.html"><img class="logo" src="imagens/logo.png" alt=""></a> 
+                    </h1>
+
+                    <nav class="cabecalho-nav">
+                        <a class="cabecalho-link link-index" href="index.html">Home</a>
+                        <a class="cabecalho-link" href="veterinarios.html">Veterinários</a>
+                        <a class="cabecalho-link" href="documentos.html">Documentos</a>
+                        <a class="cabecalho-link" href="meupet.html">Meu pet</a>
+                        <a class="cabecalho-link ultimoLink" href="minhaconta.html">Minha conta</a>
+                    </nav>
+                </div>
+            </div>
+            
+            <script>
+                var userLogged = localStorage.getItem('userLogged')
+                document.getElementById("usuarioLogado").innerHTML = '\&#128100' + userLogged + ' | ';
+            </script>
+
+        </header>
+
+        <main class="mainVeterinarios">
+            <div class="boxVeterinarios">
+                <h2 class="tituloVeterinarios">Procure por Veterinários:</h2>
+                <fieldset class="selecaoVeterinarios">
+
+                    <legend class="tituloSelecaoVeterinarios">Selecione a espécie do seu animal:</legend>
+                    <select class="selectVeterinarios" required>
+                        <option>Felinos</option>
+                        <option>Canídeos</option>
+                        <option>Anfíbios</option>
+                        <option>Répteis</option>
+                    </select>
+
+                    <legend class="tituloSelecaoVeterinarios">Selecione o peso do seu animal:</legend>
+                    <select class="selectVeterinarios" required>
+                        <option>Pequeno: 1 à 5KG</option>
+                        <option>Médio: 5 à 10KG</option>
+                        <option>Grande: 10KG ou mais</option>
+                    </select>
+
+                    <legend class="tituloSelecaoVeterinarios">Selecione o tipo de atendimento:</legend>
+                    <select class="selectVeterinarios" required>
+                        <option>Emergência 24Hrs</option>
+                        <option>Urgência</option>
+                        <option>Consulta Eletiva</option>
+                    </select>
+
+                    <label class="tituloSelecaoVeterinarios" for="veterinariosCep">Informe seu CEP da região de preferência:</label>
+                    <input type="text" id="veterinariosCep" required placeholder="00000-000" class="informVeterinarios">
+
+                    <label class="tituloSelecaoVeterinarios" for="veterinariosData">Selecione a data de atendimento:</label>
+                    <input type="date" id="veterinariosData" required class="informVeterinarios">
+
+                    <label class="tituloSelecaoVeterinarios" for="veterinariosHora">Selecione o horário de atendimento:</label>
+                    <input type="time" id="veterinariosHora" required class="informVeterinarios ultimoInput">
+
+                </fieldset>
+
+                <input type="submit" value="Buscar" class="enviarVeterinarios">
+            </div>
+
+            <div class="veterinariosPai">
+                <div class="veterinarios">
+                    <h2 class="nomeVeterinario">&#128100; Dr. Gabriel Fasolim</h2>
+                    <p class="dadosVeterinarios">&#127891; CRMV: 4472</p>
+                    <a target="_blank" href="https://www.google.com/maps/place/R.+J%C3%BAlio+Wischral,+1099+-+Uberaba,+Curitiba+-+PR,+81540-590/@-25.4746881,-49.2210783,17z/data=!3m1!4b1!4m5!3m4!1s0x94dcfab47b2ef991:0x421d5189db6afd6a!8m2!3d-25.4746881!4d-49.2188896" class="dadosVeterinarios">&#127968; R. Júlio Wischral, 1099 - Uberaba - Curitiba</a>
+                    <a href="tel:+5504133508034" class="dadosVeterinarios">&#128222; (41) 3350-8034</a>
+                    <p class="avaliacao">&#11088;&#11088;&#11088;&#11088;&#11088;</p>
+                </div>
+
+                <div class="veterinarios">
+                    <h2 class="nomeVeterinario">&#128100; Dr. Cauã Brito</h2>
+                    <p class="dadosVeterinarios">&#127891; CRMV: 10425</p>
+                    <a target="_blank" href="https://www.google.com/maps/place/Rua+Myltho+Anselmo+da+Silva,+1004+-+Merc%C3%AAs,+Curitiba+-+PR,+80510-130/@-25.4195228,-49.2875602,17z/data=!3m1!4b1!4m5!3m4!1s0x94dce3ff400df453:0xe48fcff04743da7f!8m2!3d-25.4195228!4d-49.2853715" class="dadosVeterinarios">&#127968; Rua Myltho Anselmo da Silva, 1004 - Mercês, Curitiba</a>
+                    <a href="tel:+5504133576678" class="dadosVeterinarios">&#128222; (41) 3357-6678</a>
+                    <p class="avaliacao">&#11088;&#11088;&#11088;&#11088;</p>
+                </div>
+
+                <div class="veterinarios">
+                    <h2 class="nomeVeterinario">&#128100; Dra. Mariana Ferreira</h2>
+                    <p class="dadosVeterinarios">&#127891; CRMV: 14564</p>
+                    <a target="_blank" href="https://www.google.com/maps/place/Av.+Igua%C3%A7u,+3330+-+%C3%81gua+Verde,+Curitiba+-+PR,+80240-031/@-25.4507325,-49.2952439,17z/data=!3m1!4b1!4m5!3m4!1s0x94dce384dd4550d7:0x635fd7e59855e9e7!8m2!3d-25.4507374!4d-49.2930552" class="dadosVeterinarios">&#127968; Av. Iguaçu, 3330 - Água Verde, Curitiba</a>
+                    <a href="tel:+5504133429670" class="dadosVeterinarios">&#128222; (41) 3342-9670</a>
+                    <p class="avaliacao">&#11088;&#11088;&#11088;</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footerLogo">
+                <img  src="imagens/logo.png" alt=""></a> 
+            </div>
+            <div class="footerInfo">
+                <a href="tel:+5504136291449" class="footerInfoConteudo footerInfoClicando">&#128222; Entrar em contato via telefone</a> 
+                <a href="email:" class="footerInfoConteudo footerInfoClicando">&#128231; Entrar em contato via email</a> 
+                <p class="footerInfoConteudo">&copy; COPYRIGTH</p> 
+                <p></p> 
+            </div>
+        </footer>
+        
+    </body>
+</html>

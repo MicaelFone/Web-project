@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Meu Pet - SeuPet</title>
+        
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="cabecalho">
+            <div class="cabecalhoSecundario">
+                    <nav class="cabecalhoLogin">
+                        <p id="usuarioLogado"></p>
+                    </nav>
+                    <a class="cabecalhoLogout" href="login.html">Sair</a>
+            </div>
+            <div class="cabecalhoPrincipal">
+                <div class="CabecalhoLogo-Nav">
+                    <h1 class="cabecalho-logo">
+                        <a href="index.html"><img class="logo" src="imagens/logo.png" alt=""></a> 
+                    </h1>
+
+                    <nav class="cabecalho-nav">
+                        <a class="cabecalho-link link-index" href="index.html">Home</a>
+                        <a class="cabecalho-link" href="veterinarios.html">Veterinários</a>
+                        <a class="cabecalho-link" href="documentos.html">Documentos</a>
+                        <a class="cabecalho-link" href="meupet.html">Meu pet</a>
+                        <a class="cabecalho-link ultimoLink" href="minhaconta.html">Minha conta</a>
+                    </nav>
+                </div>
+            </div>
+            
+            <script>
+                var userLogged = localStorage.getItem('userLogged')
+                document.getElementById("usuarioLogado").innerHTML = '\&#128100' + userLogged + ' | ';
+            </script>
+
+        </header>
+
+        <main class="mainMeupet">
+            <div class="boxMeupet">
+                <h2 class="tituloMeupet">Cadastre seu pet:</h2>
+                <fieldset class="selecaoMeupet">
+
+                    <legend class="tituloSelecaoMeupet">Espécie:</legend>
+                    <select class="selectMeupet" required>
+                        <option>Canídeos</option>
+                        <option>Felinos</option>
+                        <option>Anfíbios</option>
+                        <option>Répteis</option>
+                    </select>
+
+                    <label class="tituloSelecaoMeupet" for="meupetRaca">Nome:</label>
+                    <input type="text" id="meupetRaca" required placeholder="Juninho" class="informMeupet">
+
+                    <label class="tituloSelecaoMeupet" for="meupetRaca">Raça:</label>
+                    <input type="text" id="meupetRaca" required placeholder="Golden Retriever" class="informMeupet">
+
+                    <legend class="tituloSelecaoMeupet">Sexo:</legend>
+                    <select class="selectMeupet" required>
+                        <option>Macho</option>
+                        <option>Fêmea</option>
+                    </select>
+
+                    <label class="tituloSelecaoVeterinarios" for="meupetIdade">Idade:</label>
+                    <input type="text" id="meupetIdade" required placeholder="6 meses" class="informMeupet">
+
+                    <label class="tituloSelecaoVeterinarios" for="meupetPeso">Peso:</label>
+                    <input type="text" id="meupetPeso" required placeholder="8KG" class="informMeupet ultimoInputMeupet">
+
+                </fieldset>
+
+                <input type="submit" value="Editar" class="enviarMeupet">
+                <input type="submit" value="Novo cadastro" class="enviarMeupet ultimoInputEnviarSeupet">
+            </div>
+
+            <div class="seupetPai">
+                <div class="seupet">
+                    <div class="fotoNome">
+                        <img src="imagens/golden.png" alt="">
+                        <h2 class="nomeSeupet">Juninho</h2>
+                    </div>
+                </div>
+
+                <div class="seupetDados">
+                    <p class="dadosSeupet">Espécie: Canídeo</p>
+                    <p class="dadosSeupet">Raça: Golden Retriever</p>
+                    <p class="dadosSeupet">Sexo: Macho</p>
+                    <p class="dadosSeupet">Idade: 6 Meses</p>
+                    <p class="dadosSeupet">Peso: 8KG</p>
+                </div>
+
+                <div class="seupetDados">
+                    <a class="dadosSeupet infosSeupet" href="minhaconta.html">Donos &#10132;</a>
+                    <a class="dadosSeupet infosSeupet" href="">Documentação &#10132;</a>
+                    <a class="dadosSeupet infosSeupet" href="">Histórico de tratamentos &#10132;</a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footerLogo">
+                <img  src="imagens/logo.png" alt=""></a> 
+            </div>
+            <div class="footerInfo">
+                <a href="tel:+5504136291449" class="footerInfoConteudo footerInfoClicando">&#128222; Entrar em contato via telefone</a> 
+                <a href="email:" class="footerInfoConteudo footerInfoClicando">&#128231; Entrar em contato via email</a> 
+                <p class="footerInfoConteudo">&copy; COPYRIGTH</p> 
+                <p></p> 
+            </div>
+        </footer>
+        
+    </body>
+</html>

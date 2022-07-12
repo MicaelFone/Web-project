@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Minha Conta - SeuPet</title>
+        
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="cabecalho">
+            <div class="cabecalhoSecundario">
+                    <nav class="cabecalhoLogin">
+                        <p id="usuarioLogado"></p>
+                    </nav>
+                    <a class="cabecalhoLogout" href="login.html">Sair</a>
+            </div>
+            <div class="cabecalhoPrincipal">
+                <div class="CabecalhoLogo-Nav">
+                    <h1 class="cabecalho-logo">
+                        <a href="index.html"><img class="logo" src="imagens/logo.png" alt=""></a> 
+                    </h1>
+
+                    <nav class="cabecalho-nav">
+                        <a class="cabecalho-link link-index" href="index.html">Home</a>
+                        <a class="cabecalho-link" href="veterinarios.html">Veterinários</a>
+                        <a class="cabecalho-link" href="documentos.html">Documentos</a>
+                        <a class="cabecalho-link" href="meupet.html">Meu pet</a>
+                        <a class="cabecalho-link ultimoLink" href="minhaconta.html">Minha conta</a>
+                    </nav>
+                </div>
+            </div>
+            
+            <script>
+                var userLogged = localStorage.getItem('userLogged')
+                document.getElementById("usuarioLogado").innerHTML = '\&#128100' + userLogged + ' | ';
+            </script>
+
+        </header>
+
+        <main class="mainMeupet">
+            <div class="boxMeupet">
+                <h2 class="tituloMeupet">Seu cadastro:</h2>
+                <fieldset class="selecaoMeupet">
+
+                    <label class="tituloSelecaoMeupet" for="meupetNome">Nome:</label>
+                    <input type="text" id="meupetNome" required placeholder="Nome do usuario" class="informMeupet">
+
+                    <label class="tituloSelecaoMeupet" for="meupetDono">User:</label>
+                    <input type="text" id="meupetDono" required placeholder="@user" class="informMeupet">
+
+                    <label class="tituloSelecaoVeterinarios" for="meupetIdade">CPF:</label>
+                    <input type="text" id="meupetIdade" required placeholder="000.000.000-00" class="informMeupet">
+
+                    <label class="tituloSelecaoVeterinarios" for="meupetPeso">Data de nascimento:</label>
+                    <input type="date" id="meupetPeso" required class="informMeupet">
+
+                    <label class="tituloSelecaoVeterinarios" for="meupetIdade">CEP:</label>
+                    <input type="text" id="meupetIdade" required placeholder="00000-000" class="informMeupet">
+
+                    <label class="tituloSelecaoVeterinarios" for="meupetIdade">Endereço:</label>
+                    <input type="text" id="meupetIdade" required placeholder="Centro, Rua XV de Novembro - Curitiba" class="informMeupet ultimoInputMeupet">
+
+                </fieldset>
+
+                <input type="submit" value="Editar" class="enviarMeupet">
+                <input type="submit" value="Novo cadastro" class="enviarMeupet ultimoInputEnviarSeupet">
+            </div>
+
+            <div class="seupetPai">
+                <div class="seupet">
+                    <div class="fotoNome">
+                        <img src="imagens/user.png" alt="">
+                        <h2 class="nomeSeupet" id="nickUsuario"></h2>
+                    </div>
+                </div>
+
+                <div class="seupetDados">
+                    <p class="dadosSeupet" id="nomeUsuario"></p>
+                    <p class="dadosSeupet">Idade: 30 Anos</p>
+                    <p class="dadosSeupet">CEP: 06542-089</p>
+                </div>
+
+                <script>
+                    var userLogged = localStorage.getItem('userLogged')
+                    document.getElementById("nickUsuario").innerHTML = '@' + userLogged;
+                    document.getElementById("nomeUsuario").innerHTML = 'Nome: ' + userLogged;
+                </script>
+                <div class="seupetDados">
+                    <a class="dadosSeupet infosSeupet" href="meupet.html">Pets &#10132;</a>
+                    <a class="dadosSeupet infosSeupet" href="tel:+5504199224455">Contato &#10132;</a>
+                    <a class="dadosSeupet infosSeupet" href="">Postagens &#10132;</a>
+                    <a class="dadosSeupet infosSeupet" href="">Histórico de veterinários &#10132;</a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footerLogo">
+                <img  src="imagens/logo.png" alt=""></a> 
+            </div>
+            <div class="footerInfo">
+                <a href="tel:+5504136291449" class="footerInfoConteudo footerInfoClicando">&#128222; Entrar em contato via telefone</a> 
+                <a href="email:" class="footerInfoConteudo footerInfoClicando">&#128231; Entrar em contato via email</a> 
+                <p class="footerInfoConteudo">&copy; COPYRIGTH</p> 
+                <p></p> 
+            </div>
+        </footer>
+        
+    </body>
+</html>
